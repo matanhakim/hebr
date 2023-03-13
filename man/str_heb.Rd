@@ -2,7 +2,7 @@
 % Please edit documentation in R/str_heb.R
 \name{str_heb}
 \alias{str_heb}
-\title{Add a Unicode RTL-Isolating character \verb{\\u2067} to a character vector}
+\title{Add a Unicode RTL-Isolating character \verb{\\u202B} to a character vector}
 \usage{
 str_heb(string = NULL)
 }
@@ -13,7 +13,7 @@ str_heb(string = NULL)
 A character vector.
 }
 \description{
-Add a Unicode RTL-Isolating character \verb{\\u2067} to a character vector
+Add a Unicode RTL-Isolating character \verb{\\u202B} to a character vector
 }
 \examples{
 x <- "סימני ניקוד בסוף המשפט."

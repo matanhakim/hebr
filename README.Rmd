@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# hebr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of hebr is to help useRs handle Hebrew text within R code and output.
+
+## Installation
+
+You can install the development version of hebr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("matanhakim/hebr")
+```
+
+## Example
+
+This is a basic example of fixing an RTL issue when writing in Hebrew:
+
+```{r example}
+library(hebr)
+x <- "סימני ניקוד בסוף המשפט."
+str_heb(x)
+```
+
+You can also use it in plots, for example:
+
+```{r plot_1, echo = FALSE}
+library(ggplot2)
+ggplot(mtcars, aes(cyl)) +
+  geom_bar() +
+  xlab("צילינדרים!")
+```
+
+Notice how the exclamation mark is on the right-hand side, but it should be on the left.
+use `str_heb()` to solve it, like this:
+
+```{r plot_2, echo = FALSE}
+ggplot(mtcars, aes(cyl)) +
+  geom_bar() +
+  xlab(str_heb("צילינדרים!"))
+```
+
+Now the exclamation mark is on the left-hand side, like it should.
