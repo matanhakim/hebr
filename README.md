@@ -32,12 +32,24 @@ str_heb(x)
 
 You can also use it in plots, for example:
 
-    #> Warning: package 'ggplot2' was built under R version 4.2.2
+``` r
+library(ggplot2)
+#> Warning: package 'ggplot2' was built under R version 4.2.2
+ggplot(mtcars, aes(cyl)) +
+  geom_bar() +
+  xlab("צילינדרים!")
+```
 
 <img src="man/figures/README-plot_1-1.png" width="100%" />
 
 Notice how the exclamation mark is on the right-hand side, but it should
 be on the left. use `str_heb()` to solve it, like this:
+
+``` r
+ggplot(mtcars, aes(cyl)) +
+  geom_bar() +
+  xlab(str_heb("צילינדרים!"))
+```
 
 <img src="man/figures/README-plot_2-1.png" width="100%" />
 
