@@ -41,7 +41,7 @@ str_heb(x)
 
 You can also use it in plots, for example:
 
-```{r plot_1}
+```{r plot_1, out.width="50%"}
 library(ggplot2)
 ggplot(mtcars, aes(cyl)) +
   geom_bar() +
@@ -51,7 +51,7 @@ ggplot(mtcars, aes(cyl)) +
 Notice how the exclamation mark is on the right-hand side, but it should be on the left.
 use `str_heb()` to solve it, like this:
 
-```{r plot_2}
+```{r plot_2, out.width="50%"}
 ggplot(mtcars, aes(cyl)) +
   geom_bar() +
   xlab(str_heb("צילינדרים!"))

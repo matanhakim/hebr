@@ -40,7 +40,7 @@ ggplot(mtcars, aes(cyl)) +
   xlab("צילינדרים!")
 ```
 
-<img src="man/figures/README-plot_1-1.png" width="100%" />
+<img src="man/figures/README-plot_1-1.png" width="50%" />
 
 Notice how the exclamation mark is on the right-hand side, but it should
 be on the left. use `str_heb()` to solve it, like this:
@@ -51,6 +51,6 @@ ggplot(mtcars, aes(cyl)) +
   xlab(str_heb("צילינדרים!"))
 ```
 
-<img src="man/figures/README-plot_2-1.png" width="100%" />
+<img src="man/figures/README-plot_2-1.png" width="50%" />
 
 Now the exclamation mark is on the left-hand side, like it should.
